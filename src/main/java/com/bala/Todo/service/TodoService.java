@@ -31,9 +31,10 @@ public class TodoService {
     }
 
     public String updateTask(Long id, TodoModel existingtask){
-        TodoModel updateTask = existingtask;
-        updateTask.setName(existingtask.getName());
-        updateTask.setDescription(existingtask.getDescription());
-        updateTask.setTaskCompleted(existingtask.isTaskCompleted());
+        TodoModel updatedTask = existingtask;
+        updatedTask.setName(existingtask.getName());
+        updatedTask.setDescription(existingtask.getDescription());
+        updatedTask.setTaskCompleted(existingtask.isTaskCompleted());
+        return "Task has been updated";
     }
 }
