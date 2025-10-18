@@ -35,6 +35,7 @@ public class TodoService {
         updatedTask.setName(existingtask.getName());
         updatedTask.setDescription(existingtask.getDescription());
         updatedTask.setTaskCompleted(existingtask.isTaskCompleted());
+        todoRepository.save(updatedTask);
         return "Task has been updated";
     }
 }
