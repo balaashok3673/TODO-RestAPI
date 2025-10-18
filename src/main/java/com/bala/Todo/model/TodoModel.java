@@ -16,6 +16,7 @@ public class TodoModel {
     private String name;
     @Column(name = "task_description" , nullable = false)
     private String description;
+    @Getter
     @Column(name = "isTask_completed" , nullable = false)
     private boolean taskCompleted;
 
@@ -50,10 +51,6 @@ public class TodoModel {
 
     public void setDescription(String description) {
         this.description = description;
-    }
-
-    public boolean isTaskCompleted() {
-        return taskCompleted;
     }
 
     public void setTaskCompleted(boolean taskCompleted) {
