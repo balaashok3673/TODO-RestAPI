@@ -11,7 +11,7 @@ public class TodoModel {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private long id;
     @Column(name = "task_name" , nullable = false , unique = true)
     private String name;
     @Column(name = "task_description" , nullable = false)
@@ -28,11 +28,11 @@ public class TodoModel {
         this.description=description;
         this.taskCompleted=taskCompleted;
     }
-    public int getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(long id) {
         this.id = id;
     }
 
